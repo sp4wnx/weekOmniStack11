@@ -11,7 +11,7 @@ module.exports = {
 
   /** Insert new ONG */
   async create (request, response) {
-    const { name, email, whatsapp, city, uf } = request.body;
+    const { name, email, whatsapp, city, state } = request.body;
 
     const id = crypto.randomBytes(4).toString('HEX');
   
@@ -21,7 +21,7 @@ module.exports = {
       email,
       whatsapp,
       city,
-      uf
+      state
     })
   
     // console.log(data);
